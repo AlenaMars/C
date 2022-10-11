@@ -33,3 +33,18 @@ int Method3()
 }
 int year = Method3();
 Console.WriteLine (year);
+
+Вид 4 Принимает и возвращает
+string Method4(count, text)
+{
+    i = 0;
+    string result = String.Empty;
+    while (i<count)
+    {
+        result = result + text;
+        i++;
+    }
+    return result;
+}
+string res = Methos4 (4, "z");
+Console.WriteLine (res);
