@@ -48,3 +48,55 @@ string Method4(count, text)
 }
 string res = Methos4 (4, "z");
 Console.WriteLine (res);
+
+FOR
+string Method4(count, text)
+{
+    
+    string result = String.Empty;
+    for (i = 0, i<count, i++)
+    {
+        result = result + text;
+    }
+    return result;
+}
+string res = Methos4 (4, "z");
+Console.WriteLine (res);
+
+ЦИКЛ В ЦИКЛЕ на примере таблицы умножения
+
+for(i=2;i<=10,i++)
+{
+    for(j=2;j<=10,i++)
+    {
+        Console.WriteLine(&"{i} * {j} = {i*j}")
+    }
+    Console.WriteLine() разрыв
+}
+
+Упорядочивание данных внутри массива
+int[] arr = {1, 5, 5, 9, 7, 4, 4, 2, 4} // массив
+
+void PrintArray ( int[] array) //выводит на экран
+{
+    int count = array.Lenght;
+    for (int i =0; i < count; i++)
+        {
+        Console.Write($"{array[i]} ");
+        }
+        Console.WriteLine();
+
+}
+void SelectionSort( int[] array)
+{
+    for (int i =0; i < array.Lenght; i++)
+    {
+    int minPosition = i;
+    
+    
+    
+    }
+}
+
+
+
