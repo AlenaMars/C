@@ -89,14 +89,21 @@ void PrintArray ( int[] array) //выводит на экран
 }
 void SelectionSort( int[] array)
 {
-    for (int i =0; i < array.Lenght; i++)
+    for (int i =0; i < array.Lenght -1; i++)
     {
     int minPosition = i;
+    for (int j =i+1; j < array.Lenght  ; j++)
+        {
+            if(array[j] < array[minPosition] minPosition = j;
+        }
     
-    
+    int temp = array[i];
+    array[i] = array[minPosition];
+    array[minPosition] = temp;
     
     }
 }
 
-
+PrintArray(arr);
+PrintArray(arr);
 
