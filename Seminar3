@@ -1,0 +1,96 @@
+Включить подсказки -setting - Quick Suggestions
+/* Задача 17. Напишите программу, которая принимает на вход координаты точки (X и Y), причем х у не равны 0 и выдает номер четверти плоскости, 
+в которой находится эта точка
+*/
+
+int x, y;
+Console.Write($"Введите координату X: ");
+int.TryParse(Console.ReadLine()!, out x); // берем строку переводим в число выводим в out
+Console.Write($"Введите координату Y: ");
+int.TryParse(Console.ReadLine()!, out y);
+if (x > 0 && y > 0) Console.Write($"1 четверти");
+if (x < 0 && y > 0) Console.Write($"2 четверти");
+if (x < 0 && y < 0) Console.Write($"3 четверти");
+if (x > 0 && y < 0) Console.Write($"4 четверти");
+
+//Можем ввести проверку на корректно введеный код
+//например
+//дополним
+
+int x, y;
+Console.Write($"Введите координату X: ");
+bool flag1 = int.TryParse(Console.ReadLine()!, out x); // берем строку переводим в число выводим в out
+Console.Write($"Введите координату Y: ");
+bool flag2 = int.TryParse(Console.ReadLine()!, out y);
+if(!flag1 || !flag2) Console.Write($"Неверный код");
+else
+{
+    if (x > 0 && y > 0) Console.Write($"1 четверти");
+    if (x < 0 && y > 0) Console.Write($"2 четверти");
+    if (x < 0 && y < 0) Console.Write($"3 четверти");
+    if (x > 0 && y < 0) Console.Write($"4 четверти");
+}
+
+//bool хранит true false
+// можно переписать задачу на 2 проверки
+
+int x, y;
+Console.Write($"Введите координату X: ");
+int.TryParse(Console.ReadLine()!, out x); // берем строку переводим в число выводим в out
+Console.Write($"Введите координату Y: ");
+int.TryParse(Console.ReadLine()!, out y);
+
+if (x > 0)
+{
+    if(y > 0) Console.Write($"1 четверти");
+    else
+    Console.Write($"4 четверти");
+}
+else
+{
+    if(y > 0) Console.Write($"2 четверти");
+    else
+    Console.Write($"3 четверти"); 
+}
+
+/* Задача 18. Напишите программу, которая принимает на вход четверть и показывает диапозон возможных координат точек в этой четверти (x и y)
+*/
+int x;
+Console.Write($"Введите номер четверти: ");
+int.TryParse(Console.ReadLine()!, out x); // берем строку переводим в число выводим в out
+switch(x)
+{
+    case 1: //case 5:
+    Console.Write($"x > 0 y > 0");
+    break;
+    case 2:
+    Console.Write($"x < 0 y > 0");
+    break;
+    case 3:
+    Console.Write($"x < 0 y < 0");
+    break;
+    case 4:
+    Console.Write($"x > 0 y < 0");
+    break;
+    default:
+    Console.Write($"Не верный ввод"); // во всех остальных случаях
+    break;
+}
+// можно также испольовать любые типы данных
+
+
+/* Задача 20. Напишите программу которая принимает на вход координаты 2 точек
+и находит расстояние между ними в 2d 
+*/
+
+int[] A = new int[2] {3, 6};
+int[] A = new int[2] {7, 1};
+
+
+int x = (int)Math.Pow(A[0]-B[0]}, 2);
+int y = (int)Math.Pow(A[1]-B[1]}, 2);
+double ans = Math.Sqrt(x+y);
+ans  = Math.Round(ans, 2);
+Console.Write($"{ans}");
+
+
