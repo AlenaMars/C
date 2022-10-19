@@ -1,0 +1,14 @@
+List<int> list = new List<int>();
+
+for (int i = 0; i < 10; i++)
+{
+list.Add(new Random().Next(20));
+Console.Write($"{list[i]} ");
+}
+
+if (list.Contains(3))
+Console.Write($" Существует");
+
+Console.WriteLine();
+for (int i = 0; i < list.Count; i++)
+Console.Write($"{list[i]} ");
