@@ -22,5 +22,5 @@ int.TryParse(Console.ReadLine()!, out a);
 int b;
 Console.Write($"Введите позицию j: ");
 int.TryParse(Console.ReadLine()!, out b);
-if (a <= array.GetLength(0) || b <= array.GetLength(0)) Console.Write($"{array[a, b]}");
-if (a > array.GetLength(0) && b > array.GetLength(0)) Console.Write($"Такой позиции нет");
+if (a <= array.GetLength(0) || b <= array.GetLength(1)) Console.Write($"{array[a, b]}");
+if (a > array.GetLength(0) && b > array.GetLength(1)) Console.Write($"Такой позиции нет");
